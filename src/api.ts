@@ -1,14 +1,14 @@
-import {User} from "./user.model";
-import {Item} from "./item.model";
+import {User} from './user.model'
+import {Item} from './item.model'
 
-export interface api {
+export interface Api {
   v1: {
     user: StandardRestInterface<User, {}>,
     item: StandardRestInterface<Item, {}>
   }
 }
 
-interface StandardRestInterface<T, K> {
+export interface StandardRestInterface<T, K> {
   get: {
     id: string;
     queryParams?: K;

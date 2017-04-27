@@ -2,16 +2,53 @@
   "name": "typescript-mean-models",
   "version": "0.0.4",
   "description": "The models of the Typescript MEAN Stack Boilerplate",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "typings": "src/index.d.ts",
+  "files": [
+    "dist/",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint \"src/**/*.ts\"",
+    "clean": "rimraf dist",
+    "tsc": "tsc",
+    "build": "yarn run clean && yarn run tsc",
+    "test-spec": "mocha dist/**/*.spec.js -R spec --bail",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- \"dist/**/*.spec.js\" -R spec --bail",
+    "test": "yarn run build && yarn run lint && yarn run test-cov",
+    "prepublish": "typings install && yarn run build"
+  },
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodebitsDesign/typescript-mean-models.git"
   },
   "author": "Seokjin Seo <codebits.design@gmail.com>",
   "license": "MIT",
+  "homepage": "https://github.com/CodebitsDesign/typescript-mean-models",
+  "bugs": {
+    "url": "https://github.com/CodebitsDesign/typescript-mean-models/issues"
+  },
   "dependencies": {
     "bcrypt": "^1.0.2",
     "inversify": "^3.3.0",
-    "reflect-metadata": "^0.1.10"
+    "reflect-metadata": "^0.1.10",
+    "tsconfig": "^6.0.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.0.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "istanbul": "^0.4.0",
+    "mocha": "^3.3.0",
+    "rimraf": "^2.5.4",
+    "semver": "^5.1.0",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.0.0",
+    "tslint-config-standard": "^5.0.1",
+    "typescript": "^2.3.0",
+    "typings": "^2.0.0"
   }
 }
