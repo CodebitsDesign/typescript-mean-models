@@ -1,6 +1,6 @@
 {
   "name": "typescript-mean-models",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "The models of the Typescript MEAN Stack Boilerplate",
   "main": "dist/index.js",
   "typings": "src/index.d.ts",
