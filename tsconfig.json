@@ -1,17 +1,19 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "src",
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "target": "es6",
     "lib": ["es6"],
     "types": ["reflect-metadata"],
-    "module": "commonjs",
-    "outDir": "dist",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "module": "es6"
   },
-  "include": [
-    "src/**/*.ts"
-  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.test.ts"
   ]
 }
