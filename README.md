@@ -49,7 +49,7 @@ Then process git commands:
 $ git status
 ```
 
-> If you haven’t initialised a Git repository in the project directory, 
+> If you haven't initialised a Git repository in the project directory, 
 > use the below command to initialise the local directory as Git repository:
 
 ```bash
