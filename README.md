@@ -29,7 +29,20 @@ Step 2-A. Publishes a package to the `npm` registry.
 $ yarn publish
 ```
 > Publishes the package defined by the `package.json` in the current directory.
-
+> 
+> `yarn publish` causes ERROR "*.tgz: Invalid tar header." when run `yarn install`.
+> Instead, use `npm publish`:
+> ```bash
+> $ npm adduser
+> Username: <login_id of www.npmjs.com>
+> Password:
+> Email:
+> // To confirm if logged in:
+> $ npm whoami
+>
+> $ npm version patch
+> $ npm publish
+> ```
 
 Step 2-B. Publishes a package to the `github` repository.
 
