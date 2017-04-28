@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "target": "es6",
     "lib": ["es6"],
-    "types": ["reflect-metadata"],
+    "types": ["reflect-metadata", "node"],
+    "typeRoots": ["node_modules/@types"],
     "module": "commonjs",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "declaration": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -17,13 +18,11 @@
     "sourceMap": true,
     "inlineSources": true
   },
-  "include": [
+    "include": [
     "src/**/*",
     "typings/**/*"
   ],
   "exclude": [
-    "node_modules",
-    "typings",
-    "typings/index.d.ts"
+    "node_modules"
   ]
 }

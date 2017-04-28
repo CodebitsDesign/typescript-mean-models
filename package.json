@@ -2,10 +2,10 @@
   "name": "typescript-mean-models",
   "version": "0.0.5",
   "description": "The models of the Typescript MEAN Stack Boilerplate",
-  "main": "dist/index.js",
-  "typings": "src/index.d.ts",
+  "main": "dist/api.js",
   "files": [
     "dist/",
+    "src/index.d.ts",
     "LICENSE"
   ],
   "scripts": {
@@ -38,7 +38,7 @@
     "tsconfig": "^6.0.0"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.1",
+    "@types/node": "^7.0.14",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "istanbul": "^0.4.0",
